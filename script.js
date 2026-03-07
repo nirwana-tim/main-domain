@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<title>Jam Digital</title>
-<style>
-  body{
-    font-family: monospace;
-    text-align: center;
-    margin-top: 100px;
-  }
 
-  #time{
-    font-size: 40px;
-    font-weight: bold;
-  }
-
-  #date{
-    margin-top: 10px;
-    font-size: 20px;
-  }
-</style>
-</head>
-<body>
-
-<div id="time"></div>
-<div id="date"></div>
-
-<script>
 function updateClock(){
     const now = new Date()
 
@@ -50,7 +22,3 @@ function updateClock(){
 }
 
 setInterval(updateClock, 1)
-</script>
-
-</body>
-</html>
