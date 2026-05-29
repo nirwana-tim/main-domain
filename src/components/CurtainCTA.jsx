@@ -34,7 +34,7 @@ export default function CurtainCTA({ t }) {
             <p>{t.cta.body}</p>
             <div className="curtain-cta-actions">
               <a className="curtain-primary" href="#download" onClick={handleDownload}>{t.cta.getApp}</a>
-              <a className="curtain-secondary" href="mailto:pressup@help">{t.cta.question}</a>
+              <a className="curtain-secondary" href="mailto:nirwanatim@gmail.com">{t.cta.question}</a>
             </div>
           </div>
         </div>
