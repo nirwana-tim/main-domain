@@ -28,7 +28,7 @@ const SocialIcon = ({ type }) => {
   );
 };
 
-import { handleDownload } from '../utils';
+import { handleDownload, handleEmail } from '../utils';
 
 export default function Footer({ t }) {
   return (
@@ -56,7 +56,7 @@ export default function Footer({ t }) {
         <div className="footer-column">
           <h3>{t.footer.contactUs}</h3>
           <a href="#download">Dengkikok, NYC</a>
-          <a href="mailto:pressup@help">pressup@help</a>
+          <a href="mailto:nirwanatim@gmail.com" onClick={handleEmail}>nirwanatim@gmail.com</a>
           <a href="tel:+123456789">+ (123) 456 789</a>
           <a href="#download">@pressup.official</a>
         </div>
@@ -75,7 +75,7 @@ export default function Footer({ t }) {
             <p>{t.footer.developed}</p>
           </div>
           <div className="social-icons">
-            <a href="mailto:pressup@help" aria-label="Email"><SocialIcon type="mail" /></a>
+            <a href="mailto:nirwanatim@gmail.com" aria-label="Email" onClick={handleEmail}><SocialIcon type="mail" /></a>
             <a href="#download" aria-label="Instagram"><SocialIcon type="instagram" /></a>
             <a href="#gameplay" aria-label="YouTube"><SocialIcon type="youtube" /></a>
           </div>
