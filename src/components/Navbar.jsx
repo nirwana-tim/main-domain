@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { languageOptions } from '../translations';
+import { handleDownload } from '../utils';
 
 function LanguageSwitcher({ lang, setLang }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +72,7 @@ export default function Navbar({ lang, setLang, t }) {
         aria-label="Press Up home"
         onClick={closeMenu}
       >
-        <img src="/assets/Logo.png" alt="" />
+        <img src="/assets/logo.png" alt="" />
         <span>Press Up</span>
       </a>
 
@@ -84,7 +85,7 @@ export default function Navbar({ lang, setLang, t }) {
 
       <div className="nav-actions">
         <LanguageSwitcher lang={lang} setLang={setLang} />
-        <a className="download-button" href="#download">{t.nav.download}</a>
+        <a className="download-button" href="#download" onClick={handleDownload}>{t.nav.download}</a>
       </div>
 
       <button
@@ -107,7 +108,7 @@ export default function Navbar({ lang, setLang, t }) {
         <a href="#how-it-works" onClick={closeMenu}>{t.nav.howItWorks}</a>
         <a href="#reviews" onClick={closeMenu}>{t.nav.review}</a>
         <div className="mobile-nav-actions">
-          <a className="download-button" href="#download" onClick={closeMenu}>{t.nav.download}</a>
+          <a className="download-button" href="#download" onClick={(e) => { closeMenu(); handleDownload(e); }}>{t.nav.download}</a>
           <LanguageSwitcher lang={lang} setLang={setLang} />
         </div>
       </div>

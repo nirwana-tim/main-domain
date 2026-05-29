@@ -28,6 +28,8 @@ const SocialIcon = ({ type }) => {
   );
 };
 
+import { handleDownload } from '../utils';
+
 export default function Footer({ t }) {
   return (
     <footer id="download" className="footer-section">
@@ -37,7 +39,7 @@ export default function Footer({ t }) {
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="footer-logo">
-            <img src="/assets/Logo.png" alt="" />
+            <img src="/assets/logo.png" alt="" />
             <span>Press Up</span>
           </div>
           <p>{t.footer.description}</p>
@@ -61,7 +63,7 @@ export default function Footer({ t }) {
 
         <div className="footer-column">
           <h3>{t.footer.support}</h3>
-          <a href="#download">{t.footer.getApp}</a>
+          <a href="#download" onClick={handleDownload}>{t.footer.getApp}</a>
           <a href="#gameplay">{t.footer.watchGameplay}</a>
           <a href="#download">{t.footer.privacy}</a>
           <a href="#download">{t.footer.terms}</a>

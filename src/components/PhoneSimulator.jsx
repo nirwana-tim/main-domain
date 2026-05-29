@@ -11,7 +11,7 @@ export default function PhoneSimulator({ t }) {
     <section id="gameplay" className="gameplay-section">
       <div className="gameplay-inner">
         <div className="mini-logo">
-          <img src="/assets/Logo.png" alt="" />
+          <img src="/assets/logo.png" alt="" />
           <span>Press Up</span>
         </div>
         <img className="phone-mockup" src="/assets/Mockup.png" alt="Press Up gameplay phone mockup" />

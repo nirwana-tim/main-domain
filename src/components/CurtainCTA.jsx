@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { handleDownload } from '../utils';
 
 export default function CurtainCTA({ t }) {
   const [isCurtainOpen, setIsCurtainOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function CurtainCTA({ t }) {
             <h2>{t.cta.title}</h2>
             <p>{t.cta.body}</p>
             <div className="curtain-cta-actions">
-              <a className="curtain-primary" href="#download">{t.cta.getApp}</a>
+              <a className="curtain-primary" href="#download" onClick={handleDownload}>{t.cta.getApp}</a>
               <a className="curtain-secondary" href="mailto:pressup@help">{t.cta.question}</a>
             </div>
           </div>
