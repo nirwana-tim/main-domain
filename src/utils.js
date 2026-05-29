@@ -15,15 +15,19 @@ export const handleEmail = (e) => {
   // Ganti dengan alamat email asli Anda
   const emailAddress = 'nirwanatim@gmail.com'; 
   
+  // Subject email yang otomatis terisi
+  const subjectText = 'I have a question';
+  const encodedSubject = encodeURIComponent(subjectText);
+  
   // Deteksi apakah user menggunakan perangkat mobile (HP/Tablet)
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
   if (isMobile) {
-    // Di Mobile: Buka aplikasi email default (Gmail/Apple Mail)
-    window.location.href = `mailto:${emailAddress}`;
+    // Di Mobile: Buka aplikasi email default beserta subjeknya
+    window.location.href = `mailto:${emailAddress}?subject=${encodedSubject}`;
   } else {
-    // Di Desktop/PC: Buka web Gmail langsung di tab baru
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}`;
+    // Di Desktop/PC: Buka web Gmail langsung di tab baru beserta subjeknya
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodedSubject}`;
     window.open(gmailUrl, '_blank', 'noopener,noreferrer');
   }
 };
