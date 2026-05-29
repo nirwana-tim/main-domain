@@ -3,7 +3,7 @@ export const handleDownload = (e) => {
     e.preventDefault();
   }
   // Ganti URL di bawah ini dengan link download aplikasi Anda
-  const downloadUrl = 'https://play.google.com/store/apps/details?id=com.pressup';
+  const downloadUrl = 'https://expo.dev/artifacts/eas/owXkKeFoCGHM369YebgeTk.apk';
   window.open(downloadUrl, '_blank', 'noopener,noreferrer');
 };
 
