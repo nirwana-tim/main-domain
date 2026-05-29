@@ -1,0 +1,65 @@
+import { useState } from 'react';
+
+export default function CurtainCTA({ t }) {
+  const [isCurtainOpen, setIsCurtainOpen] = useState(false);
+
+  const toggleCurtain = () => {
+    setIsCurtainOpen((isOpen) => !isOpen);
+  };
+
+  return (
+    <section
+      className={`curtain-section${isCurtainOpen ? ' open' : ''}`}
+      aria-label={t.cta.aria}
+    >
+      <div
+        className="curtain-stage"
+        onClick={(event) => {
+          if (event.target.closest('.curtain-cta-actions')) return;
+          if (isCurtainOpen) toggleCurtain();
+        }}
+      >
+        <div className="curtain-cta-content">
+          <div className="curtain-cta-visual" aria-hidden="true">
+            <img
+              className="curtain-cta-image"
+              src="/assets/Foto Barengan.png"
+              alt=""
+            />
+          </div>
+
+          <div className="curtain-cta-copy">
+            <h2>{t.cta.title}</h2>
+            <p>{t.cta.body}</p>
+            <div className="curtain-cta-actions">
+              <a className="curtain-primary" href="#download">{t.cta.getApp}</a>
+              <a className="curtain-secondary" href="mailto:pressup@help">{t.cta.question}</a>
+            </div>
+          </div>
+        </div>
+
+        <button
+          className="curtain-overlay"
+          type="button"
+          onClick={(event) => {
+            event.stopPropagation();
+            toggleCurtain();
+          }}
+          aria-label={isCurtainOpen ? t.cta.closeCurtain : t.cta.openCurtain}
+          aria-expanded={isCurtainOpen}
+        >
+          <img
+            className="curtain-img-desktop"
+            src="/assets/Gorden Terbuka Dekstop.png"
+            alt=""
+          />
+          <img
+            className="curtain-img-mobile"
+            src="/assets/Gorden Terbuka Mobile.png"
+            alt=""
+          />
+        </button>
+      </div>
+    </section>
+  );
+}
