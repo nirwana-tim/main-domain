@@ -1,8 +1,8 @@
 const steps = [
-  ['1', '/assets/How It Works 1.png', 'step-green'],
-  ['2', '/assets/How It Works 2.png', 'step-teal'],
-  ['3', '/assets/How It Works 3.png', 'step-gray'],
-  ['4', '/assets/How It Works 4.png', 'step-blue'],
+  ['1', '/assets/webp/How It Works 1.webp', 'step-green'],
+  ['2', '/assets/webp/How It Works 2.webp', 'step-teal'],
+  ['3', '/assets/webp/How It Works 3.webp', 'step-gray'],
+  ['4', '/assets/webp/How It Works 4.webp', 'step-blue'],
 ];
 
 export default function Steps({ t }) {

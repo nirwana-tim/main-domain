@@ -24,7 +24,7 @@ export default function CurtainCTA({ t }) {
           <div className="curtain-cta-visual" aria-hidden="true">
             <img
               className="curtain-cta-image"
-              src="/assets/Foto Barengan.png"
+              src="/assets/webp/Foto Barengan.webp"
               alt=""
             />
           </div>
@@ -51,12 +51,12 @@ export default function CurtainCTA({ t }) {
         >
           <img
             className="curtain-img-desktop"
-            src="/assets/Gorden Terbuka Dekstop.png"
+            src="/assets/webp/Gorden Terbuka Dekstop.webp"
             alt=""
           />
           <img
             className="curtain-img-mobile"
-            src="/assets/Gorden Terbuka Mobile.png"
+            src="/assets/webp/Gorden Terbuka Mobile.webp"
             alt=""
           />
         </button>

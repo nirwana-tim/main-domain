@@ -252,7 +252,7 @@ img {
   position: relative;
   min-height: clamp(1080px, 80vw, 1520px);
   padding-top: 188px;
-  background-image: url("/assets/Background Hero.png");
+  background-image: url("/assets/webp/Background Hero.webp");
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;

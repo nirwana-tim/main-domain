@@ -72,7 +72,7 @@ export default function Navbar({ lang, setLang, t }) {
         aria-label="Press Up home"
         onClick={closeMenu}
       >
-        <img src="/assets/logo.png" alt="" />
+        <img src="/assets/webp/logo.webp" alt="" />
         <span>Press Up</span>
       </a>
 

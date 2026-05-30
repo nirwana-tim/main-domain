@@ -3,7 +3,7 @@ export const handleDownload = (e) => {
     e.preventDefault();
   }
   // Ganti URL di bawah ini dengan link download aplikasi Anda
-  const downloadUrl = 'https://expo.dev/artifacts/eas/owXkKeFoCGHM369YebgeTk.apk';
+  const downloadUrl = 'https://expo.dev/artifacts/eas/rMms2BrBVVJmqJ12FX15Pc.apk';
   window.open(downloadUrl, '_blank', 'noopener,noreferrer');
 };
 

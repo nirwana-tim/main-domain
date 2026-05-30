@@ -34,12 +34,12 @@ export default function Footer({ t }) {
   return (
     <footer id="download" className="footer-section">
       <div className="footer-diagonal" aria-hidden="true" />
-      <img className="footer-monkey" src="/assets/Monyet Duduk.png" alt="Jumpy sitting above the footer" />
+      <img className="footer-monkey" src="/assets/webp/Monyet Duduk.webp" alt="Jumpy sitting above the footer" />
 
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="footer-logo">
-            <img src="/assets/logo.png" alt="" />
+            <img src="/assets/webp/logo.webp" alt="" />
             <span>Press Up</span>
           </div>
           <p>{t.footer.description}</p>
